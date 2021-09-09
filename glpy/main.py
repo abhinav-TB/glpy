@@ -7,10 +7,18 @@ from functools import wraps
 
 class glpy:
     """Main class to initialize OpenGL and Glut functions
-
     """
 
     def __init__(self, **kwargs):
+        """initialize the class with the following parameters
+        Keyword arguments:
+        mode -- diplay mode (default GLUT_DOUBLE | GLUT_RGB)
+        size -- window size (default (500, 500))
+        position -- window position (default (0, 0))
+        title -- window title (default "glpy")
+        color -- background color (default (0.0, 0.0, 0.0))
+        range -- window range (default (-1.0, 1.0, -1.0, 1.0))
+        """
         self.mode = kwargs["mode"] if "mode" in kwargs else GLUT_RGBA
         self.size = kwargs["size"] if "size" in kwargs else (500, 500)
         self.position = kwargs["position"] if "position" in kwargs else (0, 0)
@@ -24,9 +32,6 @@ class glpy:
 
         Keyword arguments:
         function(ListCallable) : a list of callback functions that will be executed -required
-        bgcolor(List[float,float,float,float]) : background color of the window
-        axis_range(List[float,float,float,float]) : range of the axis in 2D plane
-
         """
         glutInit(sys.argv)
         glutInitDisplayMode(self.mode)
