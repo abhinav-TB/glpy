@@ -4,10 +4,10 @@ from setuptools import setup, find_packages
 HERE = pathlib.Path(__file__).parent
 
 VERSION = '0.1.0'
-PACKAGE_NAME = 'pygl'
+PACKAGE_NAME = 'glpy'
 AUTHOR = 'Abhinav TB'
 AUTHOR_EMAIL = 'abhinavtb@gmail.com'
-URL = 'https://github.com/abhinav-TB/pygl'
+URL = 'https://github.com/abhinav-TB/glpy'
 
 LICENSE = 'Apache License 2.0'
 DESCRIPTION = 'An pyOpneGL Wrapper'
