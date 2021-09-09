@@ -52,19 +52,22 @@ axis_range  | tuple    | The range of 2D plane      | (-100, 100,-100, 100)
  - Make sure you have opengl installed on your system
  - Install the package using  pip.
  - import the package and initialilze glpy
-           `app = glpy()`
+ 
+   `app = glpy()`
  - you can pass in additional parameters as seen in the API Reference as keyword arguments
-         ```app = glpy(title = "line drawing")```
+
+   ``` app = glpy(title = "line drawing")```
   - define your callback function with the help of point decorator which takes the size of the     point to be plotted as an argument . NOTE: using a decorator is not neccesory for the library to work but it can significatly reduce the code size
 	``` 
-	@point(10)
-    def  plotpoints():
+    @point(10)
+    def plotpoints():
 	    glColor3f(100, 468, 200)
 	    glVertex2f(0,0)
 	```
 - call the run the method using the callback function as  an argument to run the function
 NOTE: use a lambda function to pass callback functions with arguments
- ``` app.run(lambda:plotpoints())```
+
+    ``` app.run(lambda:plotpoints())```
 
 
 ## Contribute
