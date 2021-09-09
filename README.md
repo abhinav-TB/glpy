@@ -14,12 +14,14 @@ glpy is pyOpenGl wrapper which lets you work with pyOpenGl easily.It is not mean
     app = glpy()
     
     @point(10)
-    def  plotpoints():
+    def plotpoints():
 	    glColor3f(100, 468, 200)
 	    glVertex2f(0,0)
-      
+	    
     app.run(lambda:plotpoints())
 
+
+find more examples [here](https://github.com/abhinav-TB/glpy/tree/master/examples)
   
 
 ## Installation
@@ -43,12 +45,7 @@ allowed keyword arguments
    bgcolor  | tuple    | background color           | (0, 0, 0, 1.0)
    title    | string   | window title               | new title
 axis_range  | tuple    | The range of 2D plane      | (-100, 100,-100, 100)
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-  
+ 
 
 ## How to use?
 
