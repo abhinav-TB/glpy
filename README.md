@@ -15,7 +15,7 @@ glpy is pyOpenGl wrapper which lets you work with pyOpenGl easily.It is not mean
     
     @point(10)
     def plotpoints():
-	    glColor3f(100, 468, 200)
+	    glColor3f(100, 150, 200)
 	    glVertex2f(0,0)
 	    
     app.run(lambda:plotpoints())
