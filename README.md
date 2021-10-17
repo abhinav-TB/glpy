@@ -69,6 +69,13 @@ NOTE: use a lambda function to pass callback functions with arguments
 
     ``` app.run(lambda:plotpoints())```
 
+## New Features
+
+- @grid decorator:-  this can be used as a higher level decorator to call back functions.It will create grid lines. This is still in beta and only work with      default screen dimensions. Check out this [example](https://github.com/abhinav-TB/glpy/blob/master/examples/grid.py) to learn more
+
+- @line decorator:- this is similar to the existing point decorator, it can be used to draw a line easily
+checkout this [example](https://github.com/abhinav-TB/glpy/blob/master/examples/line.py) to learn more
+
 
 ## Contribute
 
