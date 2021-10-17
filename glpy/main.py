@@ -49,7 +49,6 @@ def point(size: float):
     def decorate(func: Callable):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            glClear(GL_COLOR_BUFFER_BIT)  # clearing the screen
             glPointSize(size)  # setting the point size
             glBegin(GL_POINTS)
             func(*args, **kwargs)
@@ -57,3 +56,21 @@ def point(size: float):
             glFlush()
         return wrapper
     return decorate
+
+def line(width: float):
+    ''' wraps a callback function allowing it to plot lines '''
+    def decorate(func: Callable):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            glLineWidth(width)  # setting the line width
+            glBegin(GL_LINES)
+            func(*args, **kwargs)
+            glEnd()
+            glFlush()
+        return wrapper
+    return decorate
+
+
+    
+        
+

@@ -2,15 +2,20 @@ import os, sys
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(CURRENT_DIR))
 from glpy import *
-app = glpy(bgcolor=(0,1,1,1.0),axis_range = (0,10,0,10))
+from glpy import grid
+app = glpy(axis_range=(-100,100,-100,100))
 
-
-@point(10)
+@grid
 def plotpoints():
-    glColor3f(100, 468, 200) # setting the color
-    glVertex2f(0,0)# seting the verte
+    # glClear(GL_COLOR_BUFFER_BIT)
+    glColor3f(1.0,0.0,0.0)
+    glPointSize(10.0)
+    glBegin(GL_POINTS)
+    glVertex2f(0.0,0.0)
+    glEnd()
+    glFlush()
 
-
+@grid
 @point(10)
 def plotLine(x1,y1,x2,y2):
     m = 2 * (y2 - y1)
@@ -26,5 +31,5 @@ def plotLine(x1,y1,x2,y2):
             y=y+1
             pk =pk - 2 * (x2 - x1)
 
-app.run(lambda:plotpoints())
+app.run(lambda:plotLine(0,0,40,40))
 
